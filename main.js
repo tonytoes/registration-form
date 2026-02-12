@@ -42,7 +42,7 @@ function checkInputs() {
   }
 
   if (password2Value === "") {
-    setErrorFor(password2, "Password2 cannot be blank");
+    setErrorFor(password2, "Password cannot be blank");
   } else if (passwordValue !== password2Value) {
     setErrorFor(password2, "Passwords does not match");
   } else {
@@ -51,16 +51,17 @@ function checkInputs() {
 }
 
 function setErrorFor(input, message) {
-  const formControl = input.parentElement;
-  const small = formControl.querySelector("small");
-  formControl.className = "reg-control error";
-  small.innerText = message;
+  const feedback = input.nextElementSibling; 
+  input.classList.add('is-invalid');
+  input.classList.remove('is-valid');
+  feedback.innerText = message;
 }
 
 function setSuccessFor(input) {
-  const formControl = input.parentElement;
-  formControl.className = "reg-control success";
+  input.classList.remove('is-invalid');
+  input.classList.add('is-valid');
 }
+
 
 function isEmail(email) {
   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(

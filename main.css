@@ -22,17 +22,7 @@ body {
   border: 0.125rem solid var(--primary-dark);
 }
 
-.reg-control.error input {
-  border-color: #e74c3c;
-}
-
-.input-group small {
-  font-size: 0.625rem;
-  visibility: hidden;
+.invalid-feedback {
+  bottom: -1.2rem;
   left: 0;
-  bottom: -1rem;
-}
-
-.reg-control.error small {
-  visibility: visible;
 }

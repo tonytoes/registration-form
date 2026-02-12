@@ -29,24 +29,23 @@
       <form id="form" class="p-4">
         <div class="container">
           <div class="row">
-            <div class="col-6 reg-control">
+            <div class="col-6">
               <label for="firstNameInput" class="mt-3">First Name</label>
               <div class="input-group rounded">
-                <div class="d-flex">
-                  <span
-                    class="input-group-text fa fa-user bg-transparent"
-                  ></span>
-                  <input
-                    type="text"
-                    name="firstname1"
-                    class="form-control username"
-                    placeholder="First Name"
-                  />
+                <span class="input-group-text fa fa-user bg-transparent"></span>
+                <input
+                  type="text"
+                  name="firstname1"
+                  class="form-control username"
+                  placeholder="First Name"
+                />
+                <div class="invalid-feedback position-absolute">
+                  Error Message
                 </div>
               </div>
             </div>
 
-            <div class="col-6 reg-control">
+            <div class="col-6">
               <label for="firstNameInput" class="mt-3">Last Name</label>
               <div class="input-group rounded">
                 <span
@@ -58,11 +57,15 @@
                   class="form-control username"
                   placeholder="Last Name"
                 />
+                <div class="invalid-feedback position-absolute">
+                  Error Message
+                </div>
               </div>
             </div>
           </div>
-          <div class="row mt-3">
-            <div class="col-6 reg-control">
+
+          <div class="row mt-4">
+            <div class="col-6">
               <label for="firstNameInput">Username</label>
               <div class="input-group rounded">
                 <span
@@ -74,9 +77,11 @@
                   class="form-control username"
                   placeholder="Username"
                 />
+                <div class="invalid-feedback position-absolute">
+                  Error Message
+                </div>
               </div>
             </div>
-
             <div class="col-6">
               <label for="firstNameInput">Phone Number</label>
               <div class="input-group rounded">
@@ -90,11 +95,14 @@
                   placeholder="Phone Number"
                   id="phoneNum"
                 />
+                <div class="invalid-feedback position-absolute">
+                  Error Message
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="row mt-1">
+          <div class="row mt-4">
             <div class="col-12">
               <label for="firstNameInput">Email Address</label>
               <div class="input-group rounded">
@@ -108,11 +116,14 @@
                   placeholder="Your E-mail Address"
                   id="email"
                 />
+                <div class="invalid-feedback position-absolute">
+                  Error Message
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="row mt-1">
+          <div class="row mt-3">
             <div class="col-6">
               <label for="genderInput">Gender</label>
               <select
@@ -158,6 +169,9 @@
                 placeholder="eg"
                 id="InputPassword"
               />
+              <div class="invalid-feedback position-absolute">
+                Error Message
+              </div>
             </div>
           </div>
 
@@ -171,6 +185,9 @@
                 placeholder="Home Address"
                 class="form-control"
               ></textarea>
+              <div class="invalid-feedback position-absolute">
+                Error Message
+              </div>
             </div>
             <div class="col-6">
               <label for="genderInput">Office Address</label>
@@ -193,11 +210,14 @@
                 ></span>
                 <input
                   type="password"
-                  name="username"
+                  name="password"
                   class="form-control -0"
                   placeholder="Password"
                   id="password"
                 />
+                <div class="invalid-feedback position-absolute">
+                  Error Message
+                </div>
               </div>
             </div>
             <div class="col-6">
@@ -208,16 +228,18 @@
                 ></span>
                 <input
                   type="password"
-                  name="number"
                   class="form-control -0"
                   placeholder="Confirm Passowrd"
                   id="password2"
                 />
+                <div class="invalid-feedback position-absolute">
+                  Error Message
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="row mt-3">
+          <div class="row mt-4">
             <div class="col-12">
               <input type="checkbox" value="" id="check_conditions" />
               <label for="check_conditions"
