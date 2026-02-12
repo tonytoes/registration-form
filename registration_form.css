@@ -1,0 +1,38 @@
+:root {
+  --primary: #e91e63;
+  --primary-dark: #c2185b;
+  --bg-card: #fff0f5;
+  --bg-app: #f3f4f6;
+  --bg-panel: #ffffff;
+  --text: #374151;
+  --border: #e5e7eb;
+  --text-heading: "Mochiy Pop P One", sans-serif;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.reg_form {
+  background-color: var(--bg-card);
+  color: var(--primary-dark);
+  font-family: var(--text-heading);
+  border: 0.125rem solid var(--primary-dark);
+}
+
+.reg-control.error input {
+  border-color: #e74c3c;
+}
+
+.input-group small {
+  font-size: 0.625rem;
+  visibility: hidden;
+  left: 0;
+  bottom: -1rem;
+}
+
+.reg-control.error small {
+  visibility: visible;
+}
