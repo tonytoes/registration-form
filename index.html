@@ -38,7 +38,7 @@
                 <input
                   type="text"
                   name="firstname1"
-                  class="form-control username"
+                  class="form-control form-input"
                   placeholder="First Name"
                 />
                 <div class="invalid-feedback position-absolute">
@@ -50,13 +50,11 @@
             <div class="col-6">
               <label for="firstNameInput" class="mt-3">Last Name</label>
               <div class="input-group rounded">
-                <span
-                  class="input-group-text fa fa-user -0 bg-transparent"
-                ></span>
+                <span class="input-group-text fa fa-user bg-transparent"></span>
                 <input
                   type="text"
                   name="lastname"
-                  class="form-control username"
+                  class="form-control form-input"
                   placeholder="Last Name"
                 />
                 <div class="invalid-feedback position-absolute">
@@ -76,7 +74,7 @@
                 <input
                   type="text"
                   name="username"
-                  class="form-control username"
+                  class="form-control form-input"
                   placeholder="Username"
                 />
                 <div class="invalid-feedback position-absolute">
@@ -84,6 +82,7 @@
                 </div>
               </div>
             </div>
+
             <div class="col-6">
               <label for="firstNameInput">Phone Number</label>
               <div class="input-group rounded">
@@ -93,9 +92,9 @@
                 <input
                   type="tel"
                   name="number"
-                  class="form-control -0"
+                  class="form-control form-input"
                   placeholder="Phone Number"
-                  id="phoneNum"
+                  id="number"
                 />
                 <div class="invalid-feedback position-absolute">
                   Error Message
@@ -109,12 +108,11 @@
               <label for="firstNameInput">Email Address</label>
               <div class="input-group rounded">
                 <span
-                  class="input-group-text fa fa-envelope -0 bg-transparent"
+                  class="input-group-text fa fa-envelope bg-transparent"
                 ></span>
                 <input
                   type="email"
-                  name="email"
-                  class="form-control -0"
+                  class="form-control"
                   placeholder="Your E-mail Address"
                   id="email"
                 />
@@ -130,7 +128,7 @@
               <label for="genderInput">Gender</label>
               <select
                 name=""
-                id="genderInput"
+                id="gender"
                 aria-label="Gender"
                 class="form-select"
               >
@@ -139,7 +137,11 @@
                 <option value="female">Female</option>
                 <option value="female">Other</option>
               </select>
+              <div class="invalid-feedback position-absolute">
+                Error Message
+              </div>
             </div>
+
             <div class="col-6">
               <label for="dateInput">Date of Birth</label>
               <input
@@ -149,6 +151,7 @@
                 id="dateInput"
               />
             </div>
+            <div class="invalid-feedback position-absolute">Error Message</div>
           </div>
 
           <div class="row mt-2">
@@ -162,58 +165,69 @@
               >
                 <option selected disabled>Select</option>
               </select>
-            </div>
-            <div class="col-6">
-              <label for="genderInput">Company Name</label>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="eg"
-                id="InputPassword"
-              />
               <div class="invalid-feedback position-absolute">
                 Error Message
+              </div>
+            </div>
+
+            <div class="col-6">
+              <label for="genderInput">Company Name</label>
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control form-input"
+                  placeholder="Company Name"
+                  id="Company"
+                />
+                <div class="invalid-feedback position-absolute">
+                  Error Message
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="row mt-1">
+          <!-- Home Address -->
+          <div class="row mt-3">
             <div class="col-6">
               <label for="genderInput">Home Address</label>
-              <textarea
-                name=""
-                id=""
-                rows="3"
-                placeholder="Home Address"
-                class="form-control"
-              ></textarea>
-              <div class="invalid-feedback position-absolute">
-                Error Message
+              <div class="input-group">
+                <textarea
+                  rows="3"
+                  placeholder="Home Address"
+                  class="form-control form-input"
+                ></textarea>
+                <div class="invalid-feedback position-absolute">
+                  Error Message
+                </div>
               </div>
             </div>
-            <div class="col-6">
+
+            <!-- Office Address -->
+            <div class="col-6 mt-3">
               <label for="genderInput">Office Address</label>
-              <textarea
-                name=""
-                id=""
-                rows="3"
-                placeholder="Office Address"
-                class="form-control"
-              ></textarea>
+              <div class="input-group">
+                <textarea
+                  rows="3"
+                  placeholder="Office Address"
+                  class="form-control form-input"
+                ></textarea>
+                <div class="invalid-feedback position-absolute">
+                  Error Message
+                </div>
+              </div>
             </div>
           </div>
 
           <div class="row mt-3">
+            <!-- Password -->
             <div class="col-6">
               <label for="firstNameInput">Password</label>
               <div class="input-group rounded">
-                <span
-                  class="fa fa-lock input-group-text -0 bg-transparent"
-                ></span>
+                <span class="fa fa-lock input-group-text bg-transparent"></span>
                 <input
                   type="password"
                   name="password"
-                  class="form-control -0"
+                  class="form-control"
                   placeholder="Password"
                   id="password"
                 />
@@ -222,16 +236,15 @@
                 </div>
               </div>
             </div>
+            <!-- Confirmation -->
             <div class="col-6">
               <label for="firstNameInput">Confirm Password</label>
               <div class="input-group rounded">
-                <span
-                  class="input-group-text fa fa-lock -0 bg-transparent"
-                ></span>
+                <span class="input-group-text fa fa-lock bg-transparent"></span>
                 <input
                   type="password"
-                  class="form-control -0"
-                  placeholder="Confirm Passowrd"
+                  class="form-control"
+                  placeholder="Confirm Password"
                   id="password2"
                 />
                 <div class="invalid-feedback position-absolute">
