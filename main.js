@@ -16,9 +16,10 @@ form.addEventListener("submit", (e) => {
 function checkInputs() {
   formInputs.forEach((input) => {
     const value = input.value.trim();
+    const msg = input.name;
 
     if (value === "") {
-      setErrorFor(input, "This field cannot be blank");
+      setErrorFor(input, msg + " cannot be blank");
     } else {
       setSuccessFor(input);
     }
@@ -32,7 +33,7 @@ function checkInputs() {
   } else {
     setSuccessFor(email);
   }
-  
+
   const passwordValue = password.value.trim();
   const password2Value = password2.value.trim();
 
