@@ -2,9 +2,9 @@
   --primary: #e91e63;
   --primary-dark: #c2185b;
   --bg-card: #fff0f5;
-  --bg-app: #f3f4f6;
+  --bg-app: #e99ba6;
   --bg-panel: #ffffff;
-  --text: #374151;
+  --text: #e96196;
   --border: #e5e7eb;
   --text-heading: "Mochiy Pop P One", sans-serif;
 }
@@ -20,6 +20,46 @@ body {
   color: var(--primary-dark);
   font-family: var(--text-heading);
   border: 0.125rem solid var(--primary-dark);
+}
+
+.btn-diagonal {
+  position: relative;
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
+  color: var(--bg-panel);
+  background: var(--bg-app);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-diagonal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #e99ba6 0%, #ffd9de 100%);
+  transition: left 0.4s ease;
+  transform: skewX(-20deg);
+  z-index: -1;
+}
+
+.btn-diagonal:hover::before {
+  left: 0;
+}
+
+.btn-diagonal:hover {
+  transform: scale(1.05);
+}
+
+.link-css {
+  color: var(--text);
 }
 
 .invalid-feedback {

@@ -273,15 +273,16 @@
 
           <div class="row mt-5">
             <div class="col-12">
-              <input type="checkbox" value="" id="check_conditions" />
+              <input type="checkbox" value="" id="check_conditions" required />
               <label for="check_conditions"
                 >I agree with the
                 <a
                   href=""
-                  class="link-primary link-underline link-underline-opacity-0"
+                  class="link-css link-underline link-underline-opacity-0"
                   >terms & conditions</a
                 ></label
               >
+              <div class="invalid-feedback">Error Message</div>
             </div>
           </div>
 
@@ -294,7 +295,7 @@
               <button
                 type="submit"
                 name="register"
-                class="rounded w-50 mt-3 reg_form px-3 py-1"
+                class="btn-diagonal rounded w-50 mt-3 reg_form"
               >
                 Register
               </button>
@@ -304,7 +305,7 @@
                 Already have an account?
                 <a
                   href=""
-                  class="link-primary link-underline link-underline-opacity-0"
+                  class="link-css link-underline link-underline-opacity-0"
                   >Login</a
                 >
               </p>
