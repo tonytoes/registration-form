@@ -19,7 +19,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="main.css" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
     <div
@@ -28,7 +27,7 @@
       <div class="registration_heading text-center fs-4 w-100">
         Registration Form
       </div>
-      <form id="form" class="p-4">
+      <form id="form" class="p-4 needs-validation" novalidate>
         <div class="container">
           <div class="row">
             <div class="col-6">
@@ -38,8 +37,10 @@
                 <input
                   type="text"
                   name="First Name"
+                  autocomplete="given-name"
                   class="form-control form-input"
                   placeholder="First Name"
+                  required
                 />
                 <div class="invalid-feedback position-absolute">
                   Error Message
@@ -54,8 +55,10 @@
                 <input
                   type="text"
                   name="Last Name"
+                  autocomplete="family-name"
                   class="form-control form-input"
                   placeholder="Last Name"
+                  required
                 />
                 <div class="invalid-feedback position-absolute">
                   Error Message
@@ -74,8 +77,10 @@
                 <input
                   type="text"
                   name="Username"
+                  autocomplete="nickname"
                   class="form-control form-input"
                   placeholder="Username"
+                  required
                 />
                 <div class="invalid-feedback position-absolute">
                   Error Message
@@ -91,10 +96,12 @@
                 ></span>
                 <input
                   type="tel"
+                  autocomplete="tel-local"
                   name="Phone Number"
                   class="form-control form-input"
                   placeholder="Phone Number"
                   id="number"
+                  required
                 />
                 <div class="invalid-feedback position-absolute">
                   Error Message
@@ -112,9 +119,11 @@
                 ></span>
                 <input
                   type="email"
+                  autocomplete="email"
                   class="form-control"
                   placeholder="Your E-mail Address"
                   id="email"
+                  required
                 />
                 <div class="invalid-feedback position-absolute">
                   Error Message
@@ -123,7 +132,7 @@
             </div>
           </div>
 
-          <div class="row mt-3">
+          <div class="row mt-4">
             <div class="col-6">
               <label for="genderInput">Gender</label>
               <select
@@ -131,15 +140,14 @@
                 id="gender"
                 aria-label="Gender"
                 class="form-select"
+                required
               >
-                <option selected disabled>Select</option>
+                <option selected disabled value="">Select</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
                 <option value="female">Other</option>
               </select>
-              <div class="invalid-feedback position-absolute">
-                Error Message
-              </div>
+              <div class="invalid-feedback">Error Message</div>
             </div>
 
             <div class="col-6">
@@ -148,10 +156,11 @@
                 type="date"
                 name="date"
                 class="form-control"
-                id="dateInput"
+                id="date"
+                required
               />
+              <div class="invalid-feedback">Error Message</div>
             </div>
-            <div class="invalid-feedback position-absolute">Error Message</div>
           </div>
 
           <div class="row mt-2">
@@ -159,15 +168,17 @@
               <label for="country">Country</label>
               <select
                 name="countries"
-                id="countries"
-                aria-label="country"
-                class="form-select px-2"
+                id="state"
+                autocomplete="address-level1"
+                class="form-select"
+                required
               >
-                <option selected disabled>Select</option>
+                <option selected disabled value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="female">Other</option>
               </select>
-              <div class="invalid-feedback position-absolute">
-                Error Message
-              </div>
+              <div class="invalid-feedback">Error Message</div>
             </div>
 
             <div class="col-6">
@@ -179,16 +190,15 @@
                   class="form-control form-input"
                   placeholder="Company Name"
                   id="Company"
+                  required
                 />
-                <div class="invalid-feedback position-absolute">
-                  Error Message
-                </div>
+                <div class="invalid-feedback">Error Message</div>
               </div>
             </div>
           </div>
 
           <!-- Home Address -->
-          <div class="row mt-2">
+          <div class="row mt-3">
             <div class="col-6">
               <label for="genderInput">Home Address</label>
               <div class="input-group">
@@ -197,6 +207,7 @@
                   rows="3"
                   placeholder="Home Address"
                   class="form-control form-input"
+                  required
                 ></textarea>
                 <div class="invalid-feedback position-absolute">
                   Error Message
@@ -205,7 +216,7 @@
             </div>
 
             <!-- Office Address -->
-            <div class="col-6 mt-2">
+            <div class="col-6">
               <label for="genderInput">Office Address</label>
               <div class="input-group">
                 <textarea
@@ -213,6 +224,7 @@
                   rows="3"
                   placeholder="Office Address"
                   class="form-control form-input"
+                  required
                 ></textarea>
                 <div class="invalid-feedback position-absolute">
                   Error Message
@@ -221,7 +233,7 @@
             </div>
           </div>
 
-          <div class="row mt-3">
+          <div class="row mt-4">
             <!-- Password -->
             <div class="col-6">
               <label for="firstNameInput">Password</label>
@@ -233,6 +245,7 @@
                   class="form-control"
                   placeholder="Password"
                   id="password"
+                  required
                 />
                 <div class="invalid-feedback position-absolute">
                   Error Message
@@ -249,6 +262,7 @@
                   class="form-control"
                   placeholder="Confirm Password"
                   id="password2"
+                  required
                 />
                 <div class="invalid-feedback position-absolute">
                   Error Message
@@ -257,7 +271,7 @@
             </div>
           </div>
 
-          <div class="row mt-4">
+          <div class="row mt-5">
             <div class="col-12">
               <input type="checkbox" value="" id="check_conditions" />
               <label for="check_conditions"
@@ -299,6 +313,8 @@
         </div>
       </form>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
+    <script src="validation.js"></script>
   </body>
 </html>
