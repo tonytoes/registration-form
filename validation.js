@@ -1,4 +1,4 @@
-/*
+
 const form = document.getElementById("form");
 const formInputs = document.querySelectorAll(".form-input");
 const number = document.getElementById("number");
@@ -95,5 +95,3 @@ function isEmail(email) {
     email,
   );
 }
-
-*/
