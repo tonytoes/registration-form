@@ -1,5 +1,7 @@
 import React from "react";
 import "./registrationForm.css";
+import { useNavigate } from 'react-router-dom';
+
 
 const RegistrationForm = () => {
   return (
@@ -255,13 +257,13 @@ const RegistrationForm = () => {
               id="check_conditions"
               required=""
             />
-            <label htmlFor="check_conditions">
-              I agree with the
+            <label htmlFor="check_conditions" className="mx-1">
+              I agree with the 
               <a
                 href=""
-                className="link-css link-underline link-underline-opacity-0"
+                className="link-css link-underline link-underline-opacity-0 mx-1"
               >
-                terms &amp; conditions
+                 terms &amp; conditions
               </a>
             </label>
             <div className="invalid-feedback">
@@ -272,7 +274,7 @@ const RegistrationForm = () => {
         <div className="row mt-1">
           <div className="col-12">
             <input type="checkbox" defaultValue="" id="check_updates" />
-            <label htmlFor="check_updates">
+            <label htmlFor="check_updates" className="mx-1">
               Recieve best offers and updates
             </label>
           </div>
