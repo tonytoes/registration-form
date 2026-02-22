@@ -2,8 +2,8 @@ import React from "react";
 import "./registrationForm.css";
 import { useNavigate } from 'react-router-dom';
 
-
 const RegistrationForm = () => {
+  
   return (
     <div className="registration_form d-flex flex-column rounded mt-5 my-4 reg_form">
     <div className="registration_heading text-center fs-4 w-100">
@@ -258,7 +258,7 @@ const RegistrationForm = () => {
               required=""
             />
             <label htmlFor="check_conditions" className="mx-1">
-              I agree with the 
+              I accept the
               <a
                 href=""
                 className="link-css link-underline link-underline-opacity-0 mx-1"
