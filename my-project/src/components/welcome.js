@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Welcome = () => {
+const welcome = () => {
     return (
         <div className='container'>
             <h1>Welcome!</h1>
@@ -9,4 +9,4 @@ const Welcome = () => {
     );
 }
 
-export default Welcome;
+export default welcome;
